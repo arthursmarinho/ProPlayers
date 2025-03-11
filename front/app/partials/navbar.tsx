@@ -23,13 +23,13 @@ export default function Navbar() {
 
         <div className="flex items-center gap-8 text-white text-lg font-semibold">
           <a href="/teams" className="hover:text-gray-300 transition">
-            Times
+            Teams
           </a>
           <a href="/players" className="hover:text-gray-300 transition">
-            Jogadores
+            Players
           </a>
           <a href="/about" className="hover:text-gray-300 transition">
-            Sobre
+            About
           </a>
         </div>
 
