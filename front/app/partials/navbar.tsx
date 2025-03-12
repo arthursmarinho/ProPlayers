@@ -10,12 +10,12 @@ import {
 export default function Navbar() {
   return (
     <ClerkProvider>
-      <nav className="flex items-center justify-between px-6 py-4 bg-black shadow-lg">
+      <nav className="flex items-center justify-evenly px-6 py-4 bg-black shadow-lg">
         <div>
           <a href="/">
             <img
               src="https://cdn-icons-png.flaticon.com/512/3405/3405846.png"
-              className="h-10 hover:opacity-80 transition"
+              className="h-10 hover:opacity-80 transition mr-34"
               alt="Logo"
             />
           </a>
@@ -36,12 +36,12 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <SignedOut>
             <SignInButton>
-              <button className="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition">
+              <button className="bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition">
                 Entrar
               </button>
             </SignInButton>
             <SignUpButton>
-              <button className="border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black transition">
+              <button className="border border-white text-white font-semibold px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
                 Registrar
               </button>
             </SignUpButton>
