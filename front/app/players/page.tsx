@@ -2,7 +2,8 @@
 
 import {useEffect, useState} from "react";
 import Link from "next/link";
-import {getPlayers, Player} from "../services/proplayerService"; // Ajuste o caminho conforme necessário
+import {getPlayers, Player} from "../services/proplayerService";
+import Image from "next/image";
 
 export default function PlayersPage() {
   const [players, setPlayers] = useState<Player[]>([]);
@@ -29,7 +30,8 @@ export default function PlayersPage() {
               key={player._id}
               className=" border border-gray-300 rounded-lg p-4 bg-white shadow-md hover:shadow-lg transition-all duration-200"
             >
-              <img
+              <Image
+                alt={player.name}
                 src={player.image}
                 className="w-full h-48 object-scale-down rounded-lg mb-4 flex justify-center"
               />

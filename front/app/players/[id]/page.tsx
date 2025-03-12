@@ -2,6 +2,7 @@
 
 import {useEffect, useState} from "react";
 import {useParams} from "next/navigation"; // Use useParams em vez de useRouter
+import Image from "next/image";
 
 type Player = {
   _id: string;
@@ -42,7 +43,7 @@ export default function PlayerDetailsPage() {
   return (
     <main>
       <h1>{player.name}</h1>
-      <img
+      <Image
         src={player.image}
         alt={player.name}
         style={{width: "200px", borderRadius: "8px"}}

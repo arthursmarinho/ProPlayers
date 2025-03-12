@@ -1,6 +1,6 @@
 "use client";
 
-import Footer from "./partials/footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,18 +15,18 @@ export default function Home() {
               Everything you need to know about the best — all in one place.
             </p>
             <div className="flex justify-center mt-6 space-x-6 animate-drop">
-              <a
+              <Link
                 href="/teams"
                 className="px-6 py-3 border-2 border-blue-600 text-blue-600 text-xl font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition"
               >
                 Teams
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/players"
                 className="px-6 py-3 border-2 border-blue-600 text-blue-600 text-xl font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition"
               >
                 Players
-              </a>
+              </Link>
             </div>
           </div>
         </div>

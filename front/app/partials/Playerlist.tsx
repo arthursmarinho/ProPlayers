@@ -3,6 +3,7 @@
 import {useEffect, useState} from "react";
 import {getPlayers, Player} from "../services/proplayerService"; // 🔥 aqui tá o import!
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [players, setPlayers] = useState<Player[]>([]);
@@ -41,7 +42,7 @@ export default function Home() {
               background: "#f9f9f9",
             }}
           >
-            <img
+            <Image
               src={player.image}
               alt={player.name}
               style={{width: "100%", borderRadius: "8px"}}
