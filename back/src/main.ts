@@ -6,7 +6,7 @@ async function bootstrap() {
 
   // Habilita o CORS para todas as origens
   app.enableCors({
-    origin: 'http://localhost:3001', // Substitua pelo seu frontend
+    origin: 'https://proplayers.onrender.com/',
   });
 
   await app.listen(3000);

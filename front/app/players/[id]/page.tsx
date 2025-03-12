@@ -23,7 +23,9 @@ export default function PlayerDetailsPage() {
 
     const fetchPlayer = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/proplayers/${id}`);
+        const response = await fetch(
+          `https://backend-tm62.onrender.com/proplayers/${id}`
+        );
         if (!response.ok) throw new Error("Erro ao buscar jogador");
         const data = await response.json();
         setPlayer(data);

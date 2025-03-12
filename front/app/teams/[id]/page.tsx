@@ -21,7 +21,9 @@ export default function TeamDetailsPage() {
 
     const fetchTeam = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/teams/${id}`);
+        const response = await fetch(
+          `https://backend-tm62.onrender.com/teams/${id}`
+        );
         if (!response.ok) throw new Error("Erro ao buscar time");
         const data = await response.json();
         setTeam(data);
