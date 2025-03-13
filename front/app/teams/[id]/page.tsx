@@ -1,8 +1,9 @@
 "use client";
 
 import {useEffect, useState} from "react";
-import {useParams} from "next/navigation"; // Use useParams em vez de useRouter
+import {useParams} from "next/navigation";
 import Image from "next/image";
+
 type Team = {
   _id: string;
   name: string;
@@ -12,7 +13,8 @@ type Team = {
 };
 
 export default function TeamDetailsPage() {
-  const {id} = useParams(); // Usando useParams para pegar o parâmetro da URL
+  const params = useParams();
+  const id = typeof params.id === "string" ? params.id : "";
 
   const [team, setTeam] = useState<Team | null>(null);
 
@@ -38,17 +40,21 @@ export default function TeamDetailsPage() {
   if (!team) return <p>Carregando...</p>;
 
   return (
-    <main>
-      <h1>{team.name}</h1>
+    <main className="p-4">
+      <h1 className="text-2xl font-bold mb-4">{team.name}</h1>
+
       <Image
-        src={team.image}
+        src={team.image.trim()} // Evita erro com espaço no final
         alt={team.name}
-        style={{width: "200px", borderRadius: "8px"}}
+        width={400}
+        height={200}
+        className="rounded-lg object-cover"
       />
-      <p>
-        <strong>Birth:</strong> {team.birth}
+
+      <p className="mt-4">
+        <strong>Fundado:</strong> {team.birth}
       </p>
-      <p>{team.history}</p>
+      <p className="mt-2">{team.history}</p>
     </main>
   );
 }
