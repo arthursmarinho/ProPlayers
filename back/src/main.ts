@@ -6,7 +6,9 @@ async function bootstrap() {
 
   // Habilita o CORS para todas as origens
   app.enableCors({
-    origin: 'https://proplayers.onrender.com/',
+    origin: '*', // Permitir todas as origens durante o desenvolvimento
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type, Authorization',
   });
 
   await app.listen(3000);
