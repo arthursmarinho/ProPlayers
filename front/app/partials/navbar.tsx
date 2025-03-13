@@ -16,9 +16,10 @@ export default function Navbar() {
         <div>
           <Link href="/">
             <Image
-              src="https://cdn-icons-png.flaticon.com/512/3405/3405846.png"
-              className="h-10 hover:opacity-80 transition mr-34"
+              src={"https://cdn-icons-png.flaticon.com/512/3405/3405846.png"}
               alt="Logo"
+              width={75}
+              height={50}
             />
           </Link>
         </div>
