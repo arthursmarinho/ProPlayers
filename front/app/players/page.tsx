@@ -32,8 +32,10 @@ export default function PlayersPage() {
             >
               <Image
                 alt={player.name}
-                src={player.image}
+                src={player.image.trim()}
                 className="w-full h-48 object-scale-down rounded-lg mb-4 flex justify-center"
+                width={400}
+                height={200}
               />
               <h2 className="text-4xl font-bold mb-2">{player.name}</h2>
               <p className="text-2xl">
